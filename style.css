@@ -1,12 +1,358 @@
-.headerLogo {
-  width: 5%;
+.page {
+    max-width: 75rem;
+    margin: auto;
+    padding: 1.25rem;
+    box-sizing: border-box;
 }
-.telegramIcon{
-  width: 2%;
+
+.header {
+    padding: 0.625rem;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+    display: flex;
 }
-.instagramIcon{
-  width: 2%;
+
+.header__navigation.navigation {
+    margin: auto;
 }
-.githubIcon{
-  width: 2%;
+
+.navigation__list {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    padding: 0.625rem;
+}
+
+.navigation__item {
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: center;
+    color: #000000;
+    line-height: 100%;
+}
+
+.navigation__link {
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.navigation__link:after {
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 0;
+	height: 0.125rem;
+	background-color: #090b0cbd;
+	content: "";
+	transition: width 0.3s ease-out;
+}
+
+.navigation__link:hover:after,
+.navigation__link:focus:after {
+	width: 100%;
+}
+
+.logo__img {
+    height: 6.25rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    transition: transform 0.25s;
+}
+
+.logo__img:hover {
+    transform: scale(1.1);
+}
+
+.main-content {
+    padding: 0.625rem 1.25rem 0.625rem 2.5rem;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.article__title {
+    line-height: 120%;
+    text-transform: uppercase;
+    font-size: 4rem;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Helvetica", san-serif;
+    max-width: 50%;
+    text-align: left;
+    word-spacing: 0.125rem;
+    letter-spacing: 0;
+}
+
+.article__section {
+    margin-bottom: 1.875rem;
+    margin-right: 0.625rem;
+}
+
+.article__section.description {}
+
+.description__content {
+    margin: auto;
+}
+
+.description__text {
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Roboto", san-serif;
+    margin-right: 9.375rem;
+    text-align: left;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+
+.description__img {
+    width: 100%;
+    height: 100%;
+    min-height: auto;
+    margin: auto;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.about-us__title,
+.achievements__title,
+.workflow__title,
+.projects__title,
+.contact__title {
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Helvetica", san-serif;
+    word-spacing: 0;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.article__section.about-us {}
+
+.about-us__text {
+    margin: auto;
+    margin-top: 0.9375rem;
+    font-size: 1.2rem;
+    line-height: 140%;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+}
+
+.article__section.achievements {}
+
+.achievements__list {
+    list-style: none;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.achievements__subtitle {
+    margin-bottom: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+    line-height: 2.0625rem;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Helvetica", san-serif;
+    text-align: left;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+}
+
+.achievements__text {
+    margin-bottom: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    line-height: 100%;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+}
+
+.article__section.workflow {}
+
+.workflow__list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.9375rem;
+}
+
+.workflow__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 0.0625rem solid rgb(0, 0, 0);
+    padding-bottom: 1.25rem;
+}
+
+.workflow__item-title {
+    margin-right: 0.625rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
+    line-height: 2.0625rem;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Helvetica", san-serif;
+    text-align: left;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+}
+
+.workflow__item-text {
+    margin-top: 1.25rem;
+    margin-bottom: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    line-height: 140%;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+}
+
+.projects__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects__item {
+    width: 22.5rem;
+    height: 31.25rem;
+    overflow: hidden;
+    filter: drop-shadow(0 0 0.25rem rgba(0, 0, 0, 0.5));
+}
+
+.project__img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.25s;
+}
+
+.project__img:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    padding: 1.25rem;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__column{
+    margin: auto;
+}
+
+.copyright__text {
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+}
+
+.footer__address {
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    text-indent: 0;
+    word-spacing: 0;
+    letter-spacing: 0;
+}
+
+.footer__social-list {
+    list-style: none;
+    padding: 0;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.footer__social-icon--github,
+.footer__social-icon--instagram,
+.footer__social-icon--telegram {
+    height: 2.1875rem;
+}
+
+.sidebar {
+    width: 15vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
+    padding: 1.25rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.sidebar__section.snippet {
+    display: none;
+}
+
+.contact__text {
+    font-size: 1.2rem;
+    line-height: 140%;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+}
+
+.contact__link {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact__link:hover {
+    color: #007bffae;
+}
+
+.article__section.achievements,
+.article__section.workflow,
+.article__section.about-us,
+.article__section.description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+.projects__list {
+    display: grid;
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(21.5rem, 1fr));
 }
