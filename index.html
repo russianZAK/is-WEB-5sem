@@ -11,144 +11,191 @@
     <meta name="description" content="PCGRAPE - ведущая фирма по продаже, сборке и обслуживанию компьютеров.
         В ассортименте имеются все виды комплектующих. Наша профессиональная команда готова реализовать
         ваш проект в жизнь: от рабочих тихонь до геймерских монстров.">
-    <script src="outline-prototype/outline-control.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Lato&family=Nunito+Sans:opsz@6..12&family=Nunito:wght@300&family=PT+Sans&family=Roboto&display=swap"
+        rel="stylesheet">
     <title>PCGRAPE</title>
 
 </head>
 
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Услуги</a></li>
+<body class="page">
+
+    <header class="header">
+        <nav class="header__navigation navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="index.html" class="navigation__link">Главная</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Каталог</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Отзывы</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Услуги</a></li>
             </ul>
         </nav>
-        <a href="index.html"><img src="images/logo.svg" alt="Logo" class="headerLogo"></a>
+        <a href="index.html" class="header__logo logo">
+            <img src="images/logo.svg" alt="Logo" class="logo__img">
+        </a>
     </header>
 
-    <main>
-        <article>
-            <h1>"PCGRAPE" - мы воплощаем идеи в жизнь!</h1>
+    <main class="main-content">
+        <article class="article">
+            <h1 class="article__title">"PCGRAPE" - мы воплощаем идеи в жизнь!</h1>
 
-            <section>
-                <p>Мы можем произвести любое техническое решение для ваших потребностей.</p>
-                <p>Более 5 лет мы создаем компьютерные решения для вас.</p>
+            <section class="article__section description">
+                <div class="description__content">
+                    <p class="description__text">Мы можем произвести любое техническое решение для ваших потребностей.
+                    </p>
+                    <p class="description__text">Более 5 лет мы создаем компьютерные решения для вас.</p>
+                </div>
+                <img src="images/main3.JPG" alt="computer" class="description__img">
             </section>
 
-            <section>
-                <h2>О нас</h2>
-                <p>Мы - команда профессионалов, которые могут произвести оптимальные компьютерные решения, основываясь
-                    на ваших нуждах. Наша основная цель - реализовать самые смелые задумки, будь то элитный гейминг или
-                    профессиональное программирование. При сборке мы используем только новейшие комплектующие от
-                    популярных фирм, проверенных временем.</p>
+            <section class="article__section about-us">
+                <h2 class="about-us__title">О нас</h2>
+                <p class="about-us__text">Мы - команда профессионалов, которые могут произвести оптимальные компьютерные
+                    решения, основываясь на ваших нуждах. Наша основная цель - реализовать самые смелые задумки, будь то
+                    элитный гейминг или профессиональное программирование. При сборке мы используем только новейшие
+                    комплектующие от популярных фирм, проверенных временем.</p>
             </section>
 
-            <section>
-                <h2>Наши достижения</h2>
-                <ul>
-                    <li>2 года гарантии на всю продукцию</li>
-                    <li>200+ выполненных проектов</li>
-                    <li>30 дней срок производства</li>
+            <section class="article__section achievements">
+                <h2 class="achievements__title">Наши достижения</h2>
+                <ul class="achievements__list">
+                    <li class="achievements__item">
+                        <p class="achievements__subtitle">2 года</p>
+                        <p class="achievements__text">гарантии на всю продукцию</p>
+                    </li>
+                    <li class="achievements__item">
+                        <p class="achievements__subtitle">200+</p>
+                        <p class="achievements__text">выполненных проектов</p>
+                    </li>
+                    <li class="achievements__item">
+                        <p class="achievements__subtitle">30 дней</p>
+                        <p class="achievements__text">срок производства</p>
+                    </li>
                 </ul>
             </section>
 
-            <section>
-                <h2>Как мы воплощаем вашу мечту</h2>
-                <ol>
-                    <li>
-                        <h3>Понимание ваших желаний</h3>
-                        <p>Мы анализируем ваши потребности, будь то конкретные требования или общие пожелания, чтобы
-                            создать компьютер вашей мечты.</p>
+            <section class="article__section workflow">
+                <h2 class="workflow__title">Как мы воплощаем вашу мечту</h2>
+                <ul class="workflow__list">
+                    <li class="workflow__item">
+                        <h3 class="workflow__item-title">Понимание ваших желаний</h3>
+                        <p class="workflow__item-text">Мы анализируем ваши потребности, будь то конкретные требования
+                            или общие пожелания, чтобы создать компьютер вашей мечты.</p>
                     </li>
-                    <li>
-                        <h3>Детализация проекта</h3>
-                        <p>На этом этапе мы выбираем компоненты, планируем будущие апгрейды и определяем бюджет проекта с
-                        учетом ваших финансовых возможностей.</p>
+                    <li class="workflow__item">
+                        <h3 class="workflow__item-title">Детализация проекта</h3>
+                        <p class="workflow__item-text">На этом этапе мы выбираем компоненты, планируем будущие апгрейды
+                            и определяем бюджет проекта с учетом ваших финансовых возможностей.</p>
                     </li>
-                    <li>
-                        <h3>Выбор идеальных комплектующих</h3>
-                        <p>В зависимости от ваших ожиданий и бюджета, мы составляем идеальную конфигурацию.</p>
+                    <li class="workflow__item">
+                        <h3 class="workflow__item-title">Выбор идеальных комплектующих</h3>
+                        <p class="workflow__item-text">В зависимости от ваших ожиданий и бюджета, мы составляем
+                            идеальную конфигурацию.</p>
                     </li>
-                    <li>
-                        <h3>Сборка и качественный контроль</h3>
-                        <p>Каждый наш компьютер собирается вручную лучшими мастерами. После этого проводится тщательное
-                            тестирование, чтобы обеспечить его стабильную работу.</p>
+                    <li class="workflow__item">
+                        <h3 class="workflow__item-title">Сборка и качественный контроль</h3>
+                        <p class="workflow__item-text">Каждый наш компьютер собирается вручную лучшими мастерами. После
+                            этого проводится тщательное тестирование, чтобы обеспечить его стабильную работу.</p>
                     </li>
-                    <li>
-                        <h3>Доставка и старт в один клик</h3>
-                        <p>Мы доставляем ваш новый компьютер и устанавливаем все нужное ПО. Готовы ответить на ваши
-                            вопросы и обеспечить безупречный старт работы.</p>
+                    <li class="workflow__item">
+                        <h3 class="workflow__item-title">Доставка и старт в один клик</h3>
+                        <p class="workflow__item-text">Мы доставляем ваш новый компьютер и устанавливаем все нужное ПО.
+                            Готовы ответить на ваши вопросы и обеспечить безупречный старт работы.</p>
                     </li>
-                </ol>
+                </ul>
+            </section>
+            <section class="article__section projects">
+                <h2 class="projects__title">Проекты</h2>
+                <ul class="projects__list">
+                    <li class="projects__item">
+                        <img src="./images/projects1.JPG" class="project__img">
+                    </li>
+                    <li class="projects__item">
+                        <img src="./images/projects2.JPG" class="project__img">
+                    </li>
+                    <li class="projects__item">
+                        <img src="./images/projects3.JPG" class="project__img">
+                    </li>
+                    <li class="projects__item">
+                        <img src="./images/projects4.JPG" class="project__img">
+                    </li>
+                    <li class="projects__item">
+                        <img src="./images/projects5.JPG" class="project__img">
+                    </li>
+                    <li class="projects__item">
+                        <img src="./images/projects6.JPG" class="project__img">
+                    </li>
+                </ul>
             </section>
 
         </article>
+    </main>
 
-        <aside>
-            <section>
-                <h3>Свяжитесь с нами</h3>
-                <p>Эл. почта: <a href="mailto:info@pcgrape.com">info@pcgrape.com</a></p>
-                <p>Тел.: <a href="tel:+78121234567">+7 (812) 123-45-67</a></p>
-            </section>
-            <section>
-                <pre><code>
+    <aside class="sidebar">
+        <section class="sidebar__section contact">
+            <h3 class="contact__title">Свяжитесь с нами:</h3>
+            <p class="contact__text">Эл. почта: <a href="mailto:info@pcgrape.com" class="contact__link">info@pcgrape.com</a></p>
+            <p class="contact__text">Тел.: <a href="tel:+78121234567" class="contact__link">+7 (812) 123-45-67</a></p>
+        </section>
+        <section class="sidebar__section snippet">
+            <pre><code class="snippet__code">
 if (budget > pcPrice) {
-    console.log('Отлично! Соберем тебе космическую станцию!');
+console.log('Отлично! Соберем тебе космическую станцию!');
 } else {
-    console.log('Не волнуйся, найдем оптимальное решение!');
+console.log('Не волнуйся, найдем оптимальное решение!');
 }
-                        </code></pre>
-                <blockquote>
-                    <q>У файла нет цели, у файла есть путь.</q>
-                    <cite>Json Стетхем</cite>
-                </blockquote>
-                <pre>
+                    </code></pre>
+            <blockquote class="snippet__quote">
+                <q>У файла нет цели, у файла есть путь.</q>
+                <cite>Json Стетхем</cite>
+            </blockquote>
+            <pre class="snippet__graphic">
 ╔═══╦═══╦═══╦═══╦═══╦═══╦═══╗
 ║╔═╗║╔═╗║╔═╗║╔═╗║╔═╗║╔═╗║╔══╝
 ║╚═╝║║░╚╣║░╚╣╚═╝║║░║║╚═╝║╚══╗
 ║╔══╣║░╔╣║╔═╣╔╗╔╣╚═╝║╔══╣╔══╝
 ║║░░║╚═╝║╚╩═║║║╚╣╔═╗║║░░║╚══╗
 ╚╝░░╚═══╩═══╩╝╚═╩╝░╚╩╝░░╚═══╝
-                        </pre>
-            </section>
-        </aside>
-    </main>
+                    </pre>
+        </section>
+    </aside>
 
-    <footer>
-        <div>
-            <div>
-                <div>
-                    <p>&copy; 2023 | PCGRAPE<sub>by Nikita Fisenko</sub></p>
-                </div>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#"><img src="images/telegram.svg" alt="Telegram" class="telegramIcon"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/instagram.svg" alt="Instagram" class="instagramIcon"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="images/github.svg" alt="Github" class="githubIcon"></a>
-                        </li>
-                    </ul>
-                </div>
+    <footer class="footer">
+        <div class="footer__column">
+            <div class="footer__copyright">
+                <p class="copyright__text">&copy; 2023 | PCGRAPE</p>
             </div>
-            <div>
-                <a href="index.html"><img src="images/logo.svg" alt="Logo" class="headerLogo"></a>
+            <div class="footer__social">
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link"><img src="images/telegram.svg" alt="Telegram"
+                                class="footer__social-icon footer__social-icon--telegram"></a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link"><img src="images/instagram.svg" alt="Instagram"
+                                class="footer__social-icon footer__social-icon--instagram"></a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link"><img src="images/github.svg" alt="Github"
+                                class="footer__social-icon footer__social-icon--github"></a>
+                    </li>
+                </ul>
             </div>
-            <div>
-                <address>
-                    <b>PCGRAPE</b>
-                    <p>Невский проспект, д. 77</p>
-                    <p>Санкт-Петербург, Россия</p>
-                </address>
-            </div>
+        </div>
+        <div class="footer__column">
+            <a href="index.html" class="footer__logo logo">
+                <img src="images/logo.svg" alt="Logo" class="logo__img">
+            </a>
+        </div>
+        <div class="footer__column">
+            <address class="footer__address">
+                <b class="footer__company-name">PCGRAPE</b>
+                <p class="footer__address-text">Невский проспект, д. 77</p>
+                <p class="footer__address-text">Санкт-Петербург, Россия</p>
+            </address>
         </div>
     </footer>
 
