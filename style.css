@@ -484,6 +484,7 @@
 
     .table__header.component-header{
         text-align: center;
+
     }
 
     .grid-item {
@@ -527,10 +528,6 @@
     .description__text {
         font-size: 1.4rem;
         margin-right: 7.5rem;
-    }
-
-    .project__img:hover {
-        transform: none;
     }
 }
 
@@ -602,7 +599,6 @@
     .navigation__list {
         flex-direction: column;
         align-items: center;
-        height: 100vh;
         padding-top: 3rem;
     }
 
@@ -668,10 +664,6 @@
         flex: 0 0 auto;
         scroll-snap-align: center;
         margin: 0 1rem;
-    }
-
-    .project__img:hover {
-        transform: none;
     }
     
     .workflow__item-title {
