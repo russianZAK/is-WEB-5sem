@@ -18,17 +18,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>PCGRAPE</title>
 
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta content="true" name="HandheldFriendly" />
+    <meta content="width" name="MobileOptimized" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+
 </head>
 
 <body class="page">
 
     <header class="header">
+        <div class="menu-burger">
+            <span class="menu-burger__line"></span>
+            <span class="menu-burger__line"></span>
+            <span class="menu-burger__line"></span>
+        </div>
+        <div class="menu-overlay"></div>
         <nav class="header__navigation navigation">
             <ul class="navigation__list">
                 <li class="navigation__item"><a href="index.html" class="navigation__link">Главная</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Каталог</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Отзывы</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link">Услуги</a></li>
+                <li class="navigation__item"><a href="catalog.html" class="navigation__link">Каталог</a></li>
+                <li class="navigation__item"><a href="feedback.html" class="navigation__link">Отзывы</a></li>
+                <li class="navigation__item"><a href="services.html" class="navigation__link">Услуги</a></li>
             </ul>
         </nav>
         <a href="index.html" class="header__logo logo">
@@ -128,14 +139,92 @@
                     </li>
                 </ul>
             </section>
+            <section class="article__section examples">
+                <h2 class="examples__title">Примеры сборок</h2>
+                <div class="examples__table">
 
+                    <div class="table grid-item main-column">
+                        <div class="table__header component-header">Компоненты</div>
+                        <div class="table__header component-header">Процессор</div>
+                        <div class="table__header component-header">Кулер</div>
+                        <div class="table__header component-header">Материнская плата</div>
+                        <div class="table__header component-header">Оперативная память</div>
+                        <div class="table__header component-header">Видеокарта</div>
+                        <div class="table__header component-header">Накопитель</div>
+                        <div class="table__header component-header">Корпус</div>
+                        <div class="table__header component-header">Блок питания</div>
+                        <div class="table__header component-header">Итого</div>
+                    </div>
+                    <div class="table grid-item">
+                        <div class="table__header component-header">Стартовая сборка</div>
+                        <div class="table__item component-item"><p class="component-title">Процессор: </p><p class="component-name">Intel Core i3-10105F</p></div>
+                        <div class="table__item component-item"><p class="component-title">Кулер: </p><p class="component-name">ID-Cooling SE-802-SD</p></div>
+                        <div class="table__item component-item"><p class="component-title">Материнская плата: </p><p class="component-name">GIGABYTE H510M H</p></div>
+                        <div class="table__item component-item"><p class="component-title">Оперативная память: </p><p class="component-name">Netac NTBSD4P32SP-08-N</p></div>
+                        <div class="table__item component-item"><p class="component-title">Видеокарта: </p><p class="component-name">NVIDIA GeForce RTX 3050</p></div>
+                        <div class="table__item component-item"><p class="component-title">Накопитель: </p><p class="component-name">ADATA ASX6000LNP-1TT-C</p></div>
+                        <div class="table__item component-item"><p class="component-title">Корпус: </p><p class="component-name">Eurocase MA02</p></div>
+                        <div class="table__item component-item"><p class="component-title">Блок питания: </p><p class="component-name">Deepcool PF500, 500 Вт</p></div>
+                        <div class="table__item component-item"><p class="component-title">Итого: </p><p class="component-name">51 500 руб.</p></div>
+                    </div>
+                    <div class="table grid-item">
+                        <div class="table__header component-header">Базовая сборка</div>
+                        <div class="table__item component-item"><p class="component-title">Процессор: </p><p class="component-name">AMD Ryzen 5 3600</p></div>
+                        <div class="table__item component-item"><p class="component-title">Кулер: </p><p class="component-name">Deepcool AG300</p></div>
+                        <div class="table__item component-item"><p class="component-title">Материнская плата: </p><p class="component-name">ASUS PRIME B450M-A II</p></div>
+                        <div class="table__item component-item"><p class="component-title">Оперативная память: </p><p class="component-name">ADATA AX4U36008G18I-CBK20</p></div>
+                        <div class="table__item component-item"><p class="component-title">Видеокарта: </p><p class="component-name">GeForce RTX 3060</p></div>
+                        <div class="table__item component-item"><p class="component-title">Накопитель: </p><p class="component-name">ADATA ASX6000LNP-1TT-C</p></div>
+                        <div class="table__item component-item"><p class="component-title">Корпус: </p><p class="component-name">Eurocase A10</p></div>
+                        <div class="table__item component-item"><p class="component-title">Блок питания: </p><p class="component-name">Cougar VTE X2 600, 600 Вт</p></div>
+                        <div class="table__item component-item"><p class="component-title">Итого: </p><p class="component-name">68 000 руб.</p></div>
+                    </div>
+                    <div class="table grid-item">
+                        <div class="table__header component-header">Оптимальная сборка</div>
+                        <div class="table__item component-item"><p class="component-title">Процессор: </p><p class="component-name">AMD Ryzen 5 5600</p></div>
+                        <div class="table__item component-item"><p class="component-title">Кулер: </p><p class="component-name">ID-Cooling SE-224-XTS</p></div>
+                        <div class="table__item component-item"><p class="component-title">Материнская плата: </p><p class="component-name">ASRock B550M PRO4</p></div>
+                        <div class="table__item component-item"><p class="component-title">Оперативная память: </p><p class="component-name">ADATA AX4U360016G18I-CBK20</p></div>
+                        <div class="table__item component-item"><p class="component-title">Видеокарта: </p><p class="component-name">GeForce RTX 3060 Ti</p></div>
+                        <div class="table__item component-item"><p class="component-title">Накопитель: </p><p class="component-name">Samsung MZ-V8V1T0BW</p></div>
+                        <div class="table__item component-item"><p class="component-title">Корпус: </p><p class="component-name">Zalman T7</p></div>
+                        <div class="table__item component-item"><p class="component-title">Блок питания: </p><p class="component-name">Deepcool PK650D, 650 Вт</p></div>
+                        <div class="table__item component-item"><p class="component-title">Итого: </p><p class="component-name">89 000 руб.</p></div>
+                    </div>
+                    <div class="table grid-item">
+                        <div class="table__header component-header">Продвинутая сборка</div>
+                        <div class="table__item component-item"><p class="component-title">Процессор: </p><p class="component-name">AMD Ryzen 7 7700X</p></div>
+                        <div class="table__item component-item"><p class="component-title">Кулер: </p><p class="component-name">ID-Cooling FROSTFLOW 240 XT</p></div>
+                        <div class="table__item component-item"><p class="component-title">Материнская плата: </p><p class="component-name">ASUS PRIME B650-PLUS</p></div>
+                        <div class="table__item component-item"><p class="component-title">Оперативная память: </p><p class="component-name">ADATA XPG GAMMIX D20</p></div>
+                        <div class="table__item component-item"><p class="component-title">Видеокарта: </p><p class="component-name">GeForce RTX 4070</p></div>
+                        <div class="table__item component-item"><p class="component-title">Накопитель: </p><p class="component-name">Samsung MZ-V8V1T0BW</p></div>
+                        <div class="table__item component-item"><p class="component-title">Корпус: </p><p>Deepcool MATREXX 55 MESH ADD-RGB 4F</p></div>
+                        <div class="table__item component-item"><p class="component-title">Блок питания: </p><p class="component-name">Be quiet! System Power 10, 850 Вт</p></div>
+                        <div class="table__item component-item"><p class="component-title">Итого: </p><p class="component-name">158 500 руб.</p></div>
+                    </div>
+                    <div class="table grid-item">
+                        <div class="table__header component-header">Максимальная сборка</div>
+                        <div class="table__item component-item"><p class="component-title">Процессор: </p><p class="component-name">AMD Ryzen 9 7900X</p></div>
+                        <div class="table__item component-item"><p class="component-title">Кулер: </p><p class="component-name">MSI MAG CORELIQUID P360</p></div>
+                        <div class="table__item component-item"><p class="component-title">Материнская плата: </p><p class="component-name">ASUS TUF GAMING B650-PLUS</p></div>
+                        <div class="table__item component-item"><p class="component-title">Оперативная память: </p><p class="component-name">ADATA XPG GAMMIX D20</p></div>
+                        <div class="table__item component-item"><p class="component-title">Видеокарта: </p><p class="component-name">NVIDIA GeForce RTX 4090</p></div>
+                        <div class="table__item component-item"><p class="component-title">Накопитель: </p><p class="component-name">Western Digital WDS200T3X0E</p></div>
+                        <div class="table__item component-item"><p class="component-title">Корпус: </p><p class="component-name">PHANTEKS Eclipse G500A PERFORMANCE</p></div>
+                        <div class="table__item component-item"><p class="component-title">Блок питания: </p><p class="component-name">PHANTEKS REVOLT PRO, 1000 Вт</p></div>
+                        <div class="table__item component-item"><p class="component-title">Итого: </p><p class="component-name">290 000 руб.</p></div>
+                    </div>
+                </div>
+            </section>
         </article>
     </main>
 
     <aside class="sidebar">
         <section class="sidebar__section contact">
             <h3 class="contact__title">Свяжитесь с нами:</h3>
-            <p class="contact__text">Эл. почта: <a href="mailto:info@pcgrape.com" class="contact__link">info@pcgrape.com</a></p>
+            <p class="contact__text">Эл. почта: <a href="mailto:info@pcgrape.com"
+                    class="contact__link">info@pcgrape.com</a></p>
             <p class="contact__text">Тел.: <a href="tel:+78121234567" class="contact__link">+7 (812) 123-45-67</a></p>
         </section>
         <section class="sidebar__section snippet">
