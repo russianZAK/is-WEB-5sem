@@ -3,11 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     activePage();
 });
 
-function getPageName(pathname) {
-    let name = pathname.split("/").pop();
-    return name;
-}
-
 function burgerMenu(){
     const burger = document.querySelector(".menu-burger");
     const overlay = document.querySelector(".menu-overlay");
@@ -26,12 +21,11 @@ function burgerMenu(){
 }
 
 function activePage(){
-    let currentPageName = getPageName(document.location.pathname);
+    let currentPageName = document.location.href;
     const menuLinks = document.querySelectorAll('.navigation__link');
-
     if (menuLinks){
         menuLinks.forEach(function(link) {
-            if (link.getAttribute('href') === currentPageName) {
+            if (link.href == currentPageName) {
                 link.classList.add('navigation__link_active');
             }
         });
