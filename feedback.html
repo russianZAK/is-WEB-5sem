@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="./scripts/time.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>PCGRAPE</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta content="true" name="HandheldFriendly" />
+    <meta content="width" name="MobileOptimized" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="menu-burger">
+            <span class="menu-burger__line"></span>
+            <span class="menu-burger__line"></span>
+            <span class="menu-burger__line"></span>
+        </div>
+        <div class="menu-overlay"></div>
+        <nav class="header__navigation navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="index.html" class="navigation__link">Главная</a></li>
+                <li class="navigation__item"><a href="catalog.html" class="navigation__link">Каталог</a></li>
+                <li class="navigation__item"><a href="feedback.html" class="navigation__link">Отзывы</a></li>
+                <li class="navigation__item"><a href="services.html" class="navigation__link">Услуги</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="header__logo logo">
+            <img src="images/logo.svg" alt="Logo" class="logo__img">
+        </a>
+    </header>
+
+    <main class="main-content">
+        
+    </main>
+
+    <aside class="sidebar">
+        <section class="sidebar__section contact">
+            <h3 class="contact__title">Свяжитесь с нами:</h3>
+            <p class="contact__text">Эл. почта: <a href="mailto:info@pcgrape.com"
+                    class="contact__link">info@pcgrape.com</a></p>
+            <p class="contact__text">Тел.: <a href="tel:+78121234567" class="contact__link">+7 (812) 123-45-67</a></p>
+        </section>
+        <section class="sidebar__section snippet">
+            <pre><code class="snippet__code">
+if (budget > pcPrice) {
+console.log('Отлично! Соберем тебе космическую станцию!');
+} else {
+console.log('Не волнуйся, найдем оптимальное решение!');
+}
+                    </code></pre>
+            <blockquote class="snippet__quote">
+                <q>У файла нет цели, у файла есть путь.</q>
+                <cite>Json Стетхем</cite>
+            </blockquote>
+            <pre class="snippet__graphic">
+╔═══╦═══╦═══╦═══╦═══╦═══╦═══╗
+║╔═╗║╔═╗║╔═╗║╔═╗║╔═╗║╔═╗║╔══╝
+║╚═╝║║░╚╣║░╚╣╚═╝║║░║║╚═╝║╚══╗
+║╔══╣║░╔╣║╔═╣╔╗╔╣╚═╝║╔══╣╔══╝
+║║░░║╚═╝║╚╩═║║║╚╣╔═╗║║░░║╚══╗
+╚╝░░╚═══╩═══╩╝╚═╩╝░╚╩╝░░╚═══╝
+                    </pre>
+        </section>
+        <section class="sidebar__section time">
+            <h3 class="time__title">Вы загрузились за:</h3>
+            <p class="time__duration"></p>
+            <p class="time__promise">А мы ответим вам быстрее!</p>
+        </section>
+    </aside>
+
+    <footer class="footer">
+        <div class="footer__column">
+            <div class="footer__copyright">
+                <p class="copyright__text">&copy; 2023 | PCGRAPE</p>
+            </div>
+            <div class="footer__social">
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link"><img src="images/telegram.svg" alt="Telegram"
+                                class="footer__social-icon footer__social-icon--telegram"></a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link"><img src="images/instagram.svg" alt="Instagram"
+                                class="footer__social-icon footer__social-icon--instagram"></a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link"><img src="images/github.svg" alt="Github"
+                                class="footer__social-icon footer__social-icon--github"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__column">
+            <a href="index.html" class="footer__logo logo">
+                <img src="images/logo.svg" alt="Logo" class="logo__img">
+            </a>
+        </div>
+        <div class="footer__column">
+            <address class="footer__address">
+                <b class="footer__company-name">PCGRAPE</b>
+                <p class="footer__address-text">Невский проспект, д. 77</p>
+                <p class="footer__address-text">Санкт-Петербург, Россия</p>
+            </address>
+        </div>
+    </footer>
+</body>
+</html>
