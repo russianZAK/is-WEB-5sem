@@ -57,6 +57,19 @@
     width: 100%;
 }
 
+.navigation__link_active{
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+}
+.navigation__link_active:after {
+    width: 0;
+}
+
+.navigation__link_active:hover:after,
+.navigation__link_active:focus:after {
+    width: 0;
+}
+
 .logo__img {
     height: 6.25rem;
     padding-left: 1.875rem;
@@ -92,7 +105,6 @@
     margin-bottom: 1.875rem;
     margin-right: 0.625rem;
 }
-
 .article__section.achievements,
 .article__section.workflow,
 .article__section.about-us,
@@ -133,7 +145,8 @@
 .workflow__title,
 .projects__title,
 .contact__title,
-.examples__title {
+.examples__title,
+.time__title {
     margin-right: auto;
     margin-bottom: auto;
     margin-top: 0;
@@ -342,7 +355,8 @@
     display: none;
 }
 
-.contact__text {
+.contact__text, .time__duration,
+.time__promise {
     font-size: 1.2rem;
     line-height: 140%;
     color: #212529;
@@ -456,17 +470,18 @@
 }
 
 @media screen and (max-width: 1700px) {
-
     .sidebar {
         width: auto;
         height: auto;
         position: static;
         padding: 2rem 0;
         margin-bottom: 1.25rem;
-
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .sidebar__section.contact {
+    .sidebar__section.contact,
+    .sidebar__section.time {
         margin: auto;
         padding-left: 1.5rem;
     }
@@ -529,6 +544,16 @@
         font-size: 1.4rem;
         margin-right: 7.5rem;
     }
+
+    .project__img:hover {
+        transform: none;
+    }
+
+    .sidebar__section.contact,
+    .sidebar__section.time {
+        margin: auto;
+        padding-left: 0
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -549,6 +574,12 @@
     .description__text {
         font-size: 1.2rem;
         margin-right: 5rem;
+    }
+
+    .sidebar__section.contact,
+    .sidebar__section.time {
+        margin: auto;
+        padding-left: 0
     }
 }
 
@@ -571,6 +602,12 @@
         box-sizing: border-box;
         padding: 0.5rem;
     }
+
+    .sidebar{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .header {
         box-shadow: 0 0 0;
         margin-bottom: 0;
@@ -603,7 +640,7 @@
     }
 
     .navigation__item {
-        width: 30vw;
+        width: 25vw;
         text-align: center;
         margin: 0.5rem 0;
         padding: 0.5rem 0;
@@ -616,6 +653,11 @@
         width: 100%;
         display: block;
         transition: background-color 0.3s ease;
+    }
+
+    .navigation__link_active{
+        text-decoration: underline;
+        text-underline-offset: 0.79rem;
     }
 
     .navigation__link:hover,
@@ -648,7 +690,6 @@
     .article__section.about-us,
     .article__section.description {
         grid-template-columns: 1fr;
-
     }
 
     .projects__list {
@@ -664,6 +705,10 @@
         flex: 0 0 auto;
         scroll-snap-align: center;
         margin: 0 1rem;
+    }
+
+    .project__img:hover {
+        transform: none;
     }
     
     .workflow__item-title {
@@ -701,6 +746,7 @@
     .component-title{
         display: block;
     }
+
     .grid-item.main-column{
         display: none;
     }
@@ -711,6 +757,12 @@
     
     .table__item.component-item:nth-child(even){
         background-color: #ffffff;
+    }
+
+    .sidebar__section.contact,
+    .sidebar__section.time {
+        margin: auto;
+        padding-left: 0
     }
 
     .footer {
