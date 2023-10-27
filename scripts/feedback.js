@@ -104,23 +104,20 @@ function deleteReviewListener(){
 
 function addReview(username, rating, review) {
     const reviewsList = document.querySelector('.feedback-content__list');
-    const listItem = document.createElement('li');
-    listItem.classList.add('feedback-content__item');
-    let starsHtml = '';
 
+    const template = document.getElementById('feedback__review-template');
+    const clone = document.importNode(template.content, true);
+
+    let starsHtml = '';
     for (let i = 0; i < rating; i++) {
         starsHtml += `<img src="${imagesSource}" alt="star" class="feedback-content__img">`;
     }
-
-    listItem.innerHTML = `
-        <div class="feedback-content__icons">${starsHtml}</div>
-        <h3 class="feedback-content__subtitle">${username}</h3>
-        <p class="feedback-content__text">${review}</p>
-        <span class="feedback-content__delete">&#10005;</span>
-    `;
+    clone.querySelector('.feedback-content__icons').innerHTML = starsHtml;
+    clone.querySelector('.feedback-content__subtitle').textContent = username;
+    clone.querySelector('.feedback-content__text').textContent = review;
 
     if (reviewsList){
-        reviewsList.insertBefore(listItem, reviewsList.firstChild);
+        reviewsList.insertBefore(clone, reviewsList.firstChild);
     }
 
     currentPage = 1;
