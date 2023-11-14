@@ -3,9 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
+    <title>Отзывы | PCGRAPE</title>
+    <meta name="keywords" content="PCGRAPE, отзывы, компьютеры, услуги, каталог">
+    <meta name="description" content="Оставьте свой отзыв о продукции и услугах PCGRAPE. Мы ценим мнение наших клиентов и стараемся улучшать наш сервис с каждым днем.">
     <script src="./scripts/time.js"></script>
     <script src="script.js"></script>
+    <script src="./scripts/feedback.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="feedback.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -14,7 +19,6 @@
     <meta content="true" name="HandheldFriendly" />
     <meta content="width" name="MobileOptimized" />
     <meta content="yes" name="apple-mobile-web-app-capable" />
-
 </head>
 
 <body class="page">
@@ -39,7 +43,107 @@
     </header>
 
     <main class="main-content">
-        
+        <article class="article">
+            <section class="article__section feedback">
+                <div class="feedback__introduction">
+                    <h2 class="feedback__title">Оставьте свой отзыв:</h2>
+                    <p class="feedback__text">Ваши слова вдохновляют нас! Оставьте свой отзыв, и мы учтем каждое слово в нашей работе.</p>
+                </div>
+    
+                <form class="feedback__form">
+                    <div class="feedback__form-item">
+                        <label for="username" class="feedback__label">Ваше имя пользователя:</label>
+                        <input type="text" id="username" class="feedback__input" required>
+                    </div>
+                    
+                    <div class="feedback__form-item">
+                        <label for="rating" class="feedback__label">Оценка:</label>
+                        <select id="rating" class="feedback__select">
+                            <option value="5">5 - Отлично</option>
+                            <option value="4">4 - Хорошо</option>
+                            <option value="3">3 - Удовлетворительно</option>
+                            <option value="2">2 - Плохо</option>
+                            <option value="1">1 - Ужасно</option>
+                        </select>
+                    </div>
+                
+                    <div class="feedback__form-item">
+                        <label for="review" class="feedback__label">Ваш отзыв:</label>
+                        <textarea id="review" class="feedback__textarea" rows="3" required></textarea>
+                    </div>
+                                        
+                    <div class="feedback__form-item">
+                        <button type="submit" class="feedback__button">Отправить отзыв</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="article__section feedback-content">
+                <div class="feedback-content__wrapper">
+                    <ul class="feedback-content__list">
+                        <li class="feedback-content__item">
+                            <div class="feedback-content__icons">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                            </div>
+                            <h3 class="feedback-content__subtitle">Noname</h3>
+                            <p class="feedback-content__text">
+                                Я обратился в PCGRAPE после того, как мой старый компьютер отказал. 
+                                Они быстро поняли мои потребности и построили мне идеальную систему
+                                для моих игр. Сервис превзошел все мои ожидания!
+                            </p>
+                        </li>
+                        <li class="feedback-content__item">
+                            <div class="feedback-content__icons">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                              <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                            </div>
+                            <h3 class="feedback-content__subtitle">
+                              Topstar
+                            </h3>
+                            <p class="feedback-content__text">
+                                Как профессиональный программист, мне нужна мощная рабочая станция. 
+                                PCGRAPE создал для меня настоящую зверь-машину, которая обрабатывает все мои задачи без проблем. Рекомендую!
+                            </p>
+                        </li>
+                        <li class="feedback-content__item">
+                            <div class="feedback-content__icons">
+                                <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                                <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                                <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                                <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                                <img src="./images/star.svg" alt="star" class="feedback-content__img">
+                            </div>
+                            <h3 class="feedback-content__subtitle">
+                              Newplayer
+                            </h3>
+                            <p class="feedback-content__text">
+                                PCGRAPE спас меня, когда я искал новый ПК для моего стартапа. 
+                                Они не только предоставили высококачественные компьютеры для моей команды, но и обеспечили отличную послепродажную поддержку. Лучший выбор!
+                            </p>
+                        </li>
+                        <template id="feedback__review-template">
+                            <li class="feedback-content__item">
+                                <div class="feedback-content__icons"></div>
+                                <h3 class="feedback-content__subtitle"></h3>
+                                <p class="feedback-content__text"></p>
+                                <span class="feedback-content__delete">&#10005;</span>
+                            </li>
+                        </template>                        
+                    </ul>
+                    <div class="feedback-content__pagination">
+                        <button class="pagination_prev-page">&larr; Предыдущая страница</button>
+                        <button class="pagination_next-page">Следующая страница &rarr;</button>
+                    </div>
+                </div>
+            </section>
+        </article>
     </main>
 
     <aside class="sidebar">
