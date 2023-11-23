@@ -176,7 +176,7 @@ function geonamesFetching() {
 
 
 function fetchNameByGeoId(geonameId) {
-    return fetch(`http://api.geonames.org/getJSON?geonameId=${geonameId}&lang=ru&username=${GEONAMES_API_USERNAME}`)
+    return fetch(`https://secure.geonames.org/getJSON?geonameId=${geonameId}&lang=ru&username=${GEONAMES_API_USERNAME}`)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -197,7 +197,7 @@ function fetchNameByGeoId(geonameId) {
 }
 
 function fetchCountries() {
-    return fetch(`http://api.geonames.org/countryInfoJSON?lang=ru&username=${GEONAMES_API_USERNAME}`)
+    return fetch(`https://secure.geonames.org/countryInfoJSON?lang=ru&username=${GEONAMES_API_USERNAME}`)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -213,7 +213,7 @@ function fetchCountries() {
 }
 
 function fetchRegions(countryCode) {
-    return fetch(`http://api.geonames.org/childrenJSON?geonameId=${countryCode}&lang=ru&username=${GEONAMES_API_USERNAME}`)
+    return fetch(`https://secure.geonames.org/childrenJSON?geonameId=${countryCode}&lang=ru&username=${GEONAMES_API_USERNAME}`)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -229,7 +229,7 @@ function fetchRegions(countryCode) {
 }
 
 function fetchCities(regionId) {
-    return fetch(`http://api.geonames.org/childrenJSON?geonameId=${regionId}&lang=ru&username=${GEONAMES_API_USERNAME}`)
+    return fetch(`https://secure.geonames.org/childrenJSON?geonameId=${regionId}&lang=ru&username=${GEONAMES_API_USERNAME}`)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -247,7 +247,7 @@ function fetchCities(regionId) {
 }
 
 function fetchTowns(cityId) {
-    return fetch(`http://api.geonames.org/childrenJSON?geonameId=${cityId}&lang=ru&username=${GEONAMES_API_USERNAME}`)
+    return fetch(`https://secure.geonames.org/childrenJSON?geonameId=${cityId}&lang=ru&username=${GEONAMES_API_USERNAME}`)
         .then(response => {
             if (response.ok) {
                 return response.json();
