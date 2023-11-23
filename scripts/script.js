@@ -2,7 +2,45 @@ document.addEventListener("DOMContentLoaded", function () {
     burgerMenu();
     activePage();
     updateTokens();
+    cookieResponding();
 });
+
+// Функция для проверки наличия файла cookie, указывающего на согласие пользователя
+function checkCookie() {
+    return document.cookie.includes("cookieConsent=true");
+}
+
+// Функция для обработки файла cookie и отображения подтверждения
+function cookieResponding() {
+    // Проверяем, нет ли уже файла cookie, указывающего на согласие пользователя
+    if (!checkCookie()) {
+        // Используем библиотеку SweetAlert для отображения всплывающего окна
+        swal({
+            title: "Подтверждение использования файлов cookie",
+            text: "Этот веб-сайт использует файлы cookie, чтобы обеспечить лучший опыт. Продолжая использовать этот сайт, вы соглашаетесь на использование файлов cookie.",
+            icon: "info",
+            buttons: true,         // Включаем кнопки подтверждения и отмены
+            dangerMode: false,     // Отключаем режим опасности (красные кнопки)
+        })
+        .then((willContinue) => {
+            // Обработка результата после нажатия кнопки в SweetAlert
+            if (willContinue) {
+                // Если пользователь согласился, показываем сообщение об успешном подтверждении
+                swal("Спасибо за подтверждение!", {
+                    icon: "success",
+                });
+            } else {
+                // Если пользователь отказался, показываем информационное сообщение
+                swal("Нам все равно нужно использовать файлы cookie!", {
+                    icon: "info",
+                });
+            }
+            
+            // Устанавливаем файл cookie с согласием пользователя
+            document.cookie = "cookieConsent=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
+        });
+    }
+}
 
 function burgerMenu() {
     const burger = document.querySelector(".menu-burger");

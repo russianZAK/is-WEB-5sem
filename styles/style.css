@@ -1,3 +1,48 @@
+.swal-modal {
+    width: 40rem;
+}
+
+.swal-title {
+    font-size: 2rem;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Helvetica", sans-serif;
+    text-align: left;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.swal-text {
+    font-size: 1.2rem;
+    color: #212529;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.swal-icon {
+    color: #007BFF;
+}
+
+.swal-button {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+}
+
+.swal-button:hover {
+    background-color: #0056b3;
+}
+
+.swal-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.swal-button:not(:last-child) {
+    margin-right: 0.625rem;
+}
+
 .page {
     max-width: 75rem;
     margin: auto;
@@ -57,10 +102,11 @@
     width: 100%;
 }
 
-.navigation__link_active{
+.navigation__link_active {
     text-decoration: underline;
     text-underline-offset: 0.4rem;
 }
+
 .navigation__link_active:after {
     width: 0;
 }
@@ -105,6 +151,7 @@
     margin-bottom: 1.875rem;
     margin-right: 0.625rem;
 }
+
 .article__section.achievements,
 .article__section.workflow,
 .article__section.about-us,
@@ -304,7 +351,7 @@
     gap: 0.3125rem;
 }
 
-.table__header.component-header{
+.table__header.component-header {
     font-family: Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: 500;
@@ -314,7 +361,7 @@
     background-color: #f8f5f5;
 }
 
-.table__item.component-item{
+.table__item.component-item {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     font-weight: 500;
@@ -324,11 +371,11 @@
     transition: background-color 0.3s ease;
 }
 
-.table__item.component-item:nth-child(odd){
+.table__item.component-item:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
-.table__item.component-item:nth-child(even){
+.table__item.component-item:nth-child(even) {
     background-color: #fdfdfd;
 }
 
@@ -336,7 +383,7 @@
     background-color: #d7d7d7;
 }
 
-.component-title{
+.component-title {
     display: none;
 }
 
@@ -355,7 +402,8 @@
     display: none;
 }
 
-.contact__text, .time__duration,
+.contact__text,
+.time__duration,
 .time__promise {
     font-size: 1.2rem;
     line-height: 140%;
@@ -497,7 +545,7 @@
         -webkit-overflow-scrolling: touch;
     }
 
-    .table__header.component-header{
+    .table__header.component-header {
         text-align: center;
 
     }
@@ -512,21 +560,23 @@
         width: 90vw;
     }
 
-    .component-name{
+    .component-name {
         word-wrap: break-word;
     }
-    .component-title{
+
+    .component-title {
         display: block;
     }
-    .grid-item.main-column{
+
+    .grid-item.main-column {
         display: none;
     }
 
-    .table__item.component-item:nth-child(odd){
+    .table__item.component-item:nth-child(odd) {
         background-color: #ffffff;
     }
-    
-    .table__item.component-item:nth-child(even){
+
+    .table__item.component-item:nth-child(even) {
         background-color: #ffffff;
     }
 }
@@ -557,6 +607,10 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    .swal-modal {
+        width: 30rem;
+    }
+
     .navigation__list {
         justify-content: center;
         padding-top: 0.5rem;
@@ -584,6 +638,21 @@
 }
 
 @media screen and (max-width: 768px) {
+    .swal-modal {
+        width: 20rem;
+    }
+    
+    .swal-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0.3rem;
+    }
+    
+    .swal-text {
+        font-size: 1rem;
+        margin-left: 0.3rem;
+    }
+    
     body,
     html {
         margin: 0;
@@ -603,7 +672,7 @@
         padding: 0.5rem;
     }
 
-    .sidebar{
+    .sidebar {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
@@ -654,7 +723,7 @@
         transition: background-color 0.3s ease;
     }
 
-    .navigation__link_active{
+    .navigation__link_active {
         text-decoration: underline;
         text-underline-offset: 0.79rem;
     }
@@ -709,7 +778,7 @@
     .project__img:hover {
         transform: none;
     }
-    
+
     .workflow__item-title {
         font-size: 1.25rem;
     }
@@ -723,7 +792,7 @@
         -webkit-overflow-scrolling: touch;
     }
 
-    .table__header.component-header{
+    .table__header.component-header {
         text-align: center;
 
     }
@@ -739,22 +808,23 @@
         margin: 0 1rem;
     }
 
-    .component-name{
+    .component-name {
         word-wrap: break-word;
     }
-    .component-title{
+
+    .component-title {
         display: block;
     }
 
-    .grid-item.main-column{
+    .grid-item.main-column {
         display: none;
     }
 
-    .table__item.component-item:nth-child(odd){
+    .table__item.component-item:nth-child(odd) {
         background-color: #ffffff;
     }
-    
-    .table__item.component-item:nth-child(even){
+
+    .table__item.component-item:nth-child(even) {
         background-color: #ffffff;
     }
 
