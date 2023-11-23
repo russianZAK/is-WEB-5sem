@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function updateLink() {
     const storedUserDetails = JSON.parse(localStorage.getItem('userDetails'));
-    console.log(storedUserDetails)
     if (storedUserDetails) {
         const loginLink = document.querySelector('.navigation__link[href="profile.html"]');
 
