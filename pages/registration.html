@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../scripts/script.js" type="application/javascript"></script>
+    <script src="../scripts/time.js" type="application/javascript"></script>
+    <script src="../scripts/registration.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="../styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="../styles/registration.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>ВХОД | PCGRAPE</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta content="true" name="HandheldFriendly" />
+    <meta content="width" name="MobileOptimized" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+
+</head>
+
+<body class="page">
+
+    <header class="header">
+        <div class="menu-burger">
+            <span class="menu-burger__line"></span>
+            <span class="menu-burger__line"></span>
+            <span class="menu-burger__line"></span>
+        </div>
+        <div class="menu-overlay"></div>
+        <nav class="header__navigation navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="../index.html" class="navigation__link">Главная</a></li>
+                <li class="navigation__item"><a href="catalog.html" class="navigation__link">Каталог</a></li>
+                <li class="navigation__item"><a href="feedback.html" class="navigation__link">Отзывы</a></li>
+                <li class="navigation__item"><a href="services.html" class="navigation__link">Услуги</a></li>
+                <li class="navigation__item"><a href="registration.html" class="navigation__link">Вход</a></li>
+            </ul>
+        </nav>
+        <a href="../index.html" class="header__logo logo">
+            <img src="../images/logo.svg" alt="Logo" class="logo__img">
+        </a>
+    </header>
+
+    <main class="main-content">
+        <article class="article">
+            <div class="toggler__buttons">
+                <button class="toggler__btn toggler__btn--active">Регистрация</button>
+                <button class="toggler__btn">Авторизация</button>
+            </div>
+            <section class="article__section registration">
+                <form class="registration-form">
+                    <div class="registration-form__input-box">
+                        <label class="registration-form__label" for="username">Имя пользователя</label>
+                        <input type="text" class="registration-form__input" id="username"
+                            placeholder="Введите имя пользователя" required />
+                        <span class="registration-form__error-message" id="username-error"></span>
+                    </div>
+                    <div class="registration-form__input-box registration-form__country">
+                        <label class="registration-form__label" for="country">Страна</label>
+                        <select class="registration-form__select" id="country" required>
+                            <option value="" hidden>Выберите страну</option>
+                        </select>
+                    </div>
+                    <div class="registration-form__input-box">
+                        <label class="registration-form__label" for="password">Пароль</label>
+                        <input type="password" class="registration-form__input" id="password"
+                            placeholder="Введите пароль" required />
+                    </div>
+                    <div class="registration-form__input-box registration-form__region">
+                        <label class="registration-form__label" for="region">Регион</label>
+                        <select class="registration-form__select" id="region" required>
+                            <option value="" hidden>Выберите регион</option>
+                        </select>
+                    </div>
+                    <div class="registration-form__input-box">
+                        <label class="registration-form__label" for="email">Email</label>
+                        <input type="email" class="registration-form__input" id="email"
+                            placeholder="Введите электронную почту" required />
+                        <span class="registration-form__error-message" id="email-error"></span>
+                    </div>
+                    <div class="registration-form__input-box">
+                        <div class="registration-form__input-box registration-form__city">
+                            <label class="registration-form__label" for="city">Район</label>
+                            <select class="registration-form__select" id="city">
+                                <option value="" hidden>Выберите район</option>
+                            </select>
+                        </div>
+                        <div class="registration-form__input-box registration-form__town">
+                            <label class="registration-form__label" for="town">Населенный пункт</label>
+                            <select class="registration-form__select" id="town">
+                                <option value="" hidden>Выберите населенный пункт</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="registration-form__input-box">
+                        <label class="registration-form__label" for="phone-number">Номер телефона</label>
+                        <input type="tel" class="registration-form__input" id="phone-number"
+                            placeholder="Введите номер телефона" required />
+                    </div>
+                    <div class="registration-form__input-box">
+                        <label class="registration-form__label" for="birth-date">Дата рождения</label>
+                        <input type="date" class="registration-form__input" id="birth-date"
+                            placeholder="Введите дату рождения" required />
+                    </div>
+                    <div class="registration-form__gender-box">
+                        <h3 class="registration-form__gender-title">Пол</h3>
+                        <div class="registration-form__gender-option">
+                            <div class="registration-form__gender">
+                                <input type="radio" id="check-male" name="gender" value="MALE"
+                                    class="registration-form__radio" checked />
+                                <label for="check-male" class="registration-form__radio-label">Муж.</label>
+                            </div>
+                            <div class="registration-form__gender">
+                                <input type="radio" id="check-female" name="gender" value="FEMALE"
+                                    class="registration-form__radio" />
+                                <label for="check-female" class="registration-form__radio-label">Жен.</label>
+                            </div>
+                            <div class="registration-form__gender">
+                                <input type="radio" id="check-other" name="gender" value="OTHER"
+                                    class="registration-form__radio" />
+                                <label for="check-other" class="registration-form__radio-label">Не указывать</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="registration-form__submit-btn">Зарегистрироваться</button>
+                </form>
+                <section class="article__section error-banner">
+                    <div class="error-banner registration">
+                        ⚠ Что-то пошло не так
+                    </div>
+                </section>
+            </section>
+            <section class="article__section authorization">
+                <form class="authorization-form">
+                    <div class="authorization-form__input-box">
+                        <label class="authorization-form__label" for="auth-username">Имя пользователя</label>
+                        <input type="text" class="authorization-form__input" id="auth-username"
+                            placeholder="Введите имя пользователя" required />
+                    </div>
+                    <div class="authorization-form__input-box">
+                        <label class="authorization-form__label" for="auth-password">Пароль</label>
+                        <input type="password" class="authorization-form__input" id="auth-password"
+                            placeholder="Введите пароль" required />
+                    </div>
+                    <button class="authorization-form__submit-btn">Войти</button>
+                </form>
+                <section class="article__section error-banner">
+                    <div class="error-banner authorization">
+                        ⚠ Что-то пошло не так
+                    </div>
+                </section>
+        </article>
+    </main>
+
+    <aside class="sidebar">
+        <section class="sidebar__section contact">
+            <h3 class="contact__title">Свяжитесь с нами:</h3>
+            <p class="contact__text">Эл. почта: <a href="mailto:info@pcgrape.com"
+                    class="contact__link">info@pcgrape.com</a></p>
+            <p class="contact__text">Тел.: <a href="tel:+78121234567" class="contact__link">+7 (812) 123-45-67</a></p>
+        </section>
+        <section class="sidebar__section snippet">
+            <pre><code class="snippet__code">
+if (budget > pcPrice) {
+console.log('Отлично! Соберем тебе космическую станцию!');
+} else {
+console.log('Не волнуйся, найдем оптимальное решение!');
+}
+                    </code></pre>
+            <blockquote class="snippet__quote">
+                <q>У файла нет цели, у файла есть путь.</q>
+                <cite>Json Стетхем</cite>
+            </blockquote>
+            <pre class="snippet__graphic">
+╔═══╦═══╦═══╦═══╦═══╦═══╦═══╗
+║╔═╗║╔═╗║╔═╗║╔═╗║╔═╗║╔═╗║╔══╝
+║╚═╝║║░╚╣║░╚╣╚═╝║║░║║╚═╝║╚══╗
+║╔══╣║░╔╣║╔═╣╔╗╔╣╚═╝║╔══╣╔══╝
+║║░░║╚═╝║╚╩═║║║╚╣╔═╗║║░░║╚══╗
+╚╝░░╚═══╩═══╩╝╚═╩╝░╚╩╝░░╚═══╝
+                    </pre>
+        </section>
+        <section class="sidebar__section time">
+            <h3 class="time__title">Вы загрузились за:</h3>
+            <p class="time__duration"></p>
+            <p class="time__promise">А мы ответим вам быстрее!</p>
+        </section>
+    </aside>
+
+    <footer class="footer">
+        <div class="footer__column">
+            <div class="footer__copyright">
+                <p class="copyright__text">&copy; 2023 | PCGRAPE</p>
+            </div>
+            <div class="footer__social">
+                <ul class="footer__social-list">
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link"><img src="../images/telegram.svg" alt="Telegram"
+                                class="footer__social-icon footer__social-icon--telegram"></a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link"><img src="../images/instagram.svg" alt="Instagram"
+                                class="footer__social-icon footer__social-icon--instagram"></a>
+                    </li>
+                    <li class="footer__social-item">
+                        <a href="#" class="footer__social-link"><img src="../images/github.svg" alt="Github"
+                                class="footer__social-icon footer__social-icon--github"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__column">
+            <a href="../index.html" class="footer__logo logo">
+                <img src="../images/logo.svg" alt="Logo" class="logo__img">
+            </a>
+        </div>
+        <div class="footer__column">
+            <address class="footer__address">
+                <b class="footer__company-name">PCGRAPE</b>
+                <p class="footer__address-text">Невский проспект, д. 77</p>
+                <p class="footer__address-text">Санкт-Петербург, Россия</p>
+            </address>
+        </div>
+    </footer>
+
+</body>
+
+</html>
