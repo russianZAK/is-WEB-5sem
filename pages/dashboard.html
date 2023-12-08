@@ -3,13 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <script src="./scripts/time.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="../scripts/script.js" type="application/javascript"></script>
+    <script src="../scripts/time.js" type="application/javascript"></script>
+    <script src="../scripts/dashboard.js" type="application/javascript"></script>
+    <link rel="stylesheet" href="../styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="../styles/dashboard.css" type="text/css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <title>PCGRAPE</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+    <link rel="stylesheet" href="../styles/flash.css">
+    <title>Статистика | PCGRAPE</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta content="true" name="HandheldFriendly" />
     <meta content="width" name="MobileOptimized" />
@@ -27,19 +32,62 @@
         <div class="menu-overlay"></div>
         <nav class="header__navigation navigation">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="index.html" class="navigation__link">Главная</a></li>
+                <li class="navigation__item"><a href="../index.html" class="navigation__link">Главная</a></li>
                 <li class="navigation__item"><a href="catalog.html" class="navigation__link">Каталог</a></li>
                 <li class="navigation__item"><a href="feedback.html" class="navigation__link">Отзывы</a></li>
                 <li class="navigation__item"><a href="services.html" class="navigation__link">Услуги</a></li>
+                <li class="navigation__item"><a href="registration.html" class="navigation__link">Вход</a></li>
             </ul>
         </nav>
-        <a href="index.html" class="header__logo logo">
-            <img src="images/logo.svg" alt="Logo" class="logo__img">
+        <a href="../index.html" class="header__logo logo">
+            <img src="../images/logo.svg" alt="Logo" class="logo__img">
         </a>
     </header>
 
     <main class="main-content">
-        
+        <article class="article">
+            <section class="article__section profiles">
+                <template id="profile-template">
+                    <section class="article__section profile">
+                        <div class="profile__avatar-box">
+                            <img src="path_to_avatar_image.jpg" alt="avatar" class="profile__avatar">
+                        </div>
+                        <div class="profile__info-box">
+                            <label class="profile__label">Имя пользователя:</label>
+                            <span class="profile__text" id="username-text"></span>
+                        </div>
+                        <div class="profile__info-box">
+                            <label class="profile__label">Email:</label>
+                            <span class="profile__text" id="email-text"></span>
+                        </div>
+                        <div class="profile__info-box">
+                            <label class="profile__label">Номер телефона:</label>
+                            <span class="profile__text" id="phone-number-text"></span>
+                        </div>
+                        <div class="profile__info-box">
+                            <label class="profile__label">Дата рождения:</label>
+                            <span class="profile__text" id="birth-date-text"></span>
+                        </div>
+                        <div class="profile__info-box">
+                            <label class="profile__label">Пол:</label>
+                            <span class="profile__text" id="gender-text"></span>
+                        </div>
+                    </section>
+                </template>
+            </section>
+            <section class="article__section error-banner">
+                <div class="error-banner dashboard">
+                    ⚠ Что-то пошло не так
+                </div>
+            </section>
+            <section class="article__section preloader">
+                <div class="preloader__spinner"></div>
+            </section>
+            <section class="article__section pagination">
+                <button class="pagination_prev-page">&larr; Предыдущая страница</button>
+                <button class="pagination_next-page">Следующая страница &rarr;</button>
+            </section>
+        </article>
     </main>
 
     <aside class="sidebar">
@@ -85,23 +133,23 @@ console.log('Не волнуйся, найдем оптимальное реше
             <div class="footer__social">
                 <ul class="footer__social-list">
                     <li class="footer__social-item">
-                        <a href="#" class="footer__social-link"><img src="images/telegram.svg" alt="Telegram"
+                        <a href="#" class="footer__social-link"><img src="../images/telegram.svg" alt="Telegram"
                                 class="footer__social-icon footer__social-icon--telegram"></a>
                     </li>
                     <li class="footer__social-item">
-                        <a href="#" class="footer__social-link"><img src="images/instagram.svg" alt="Instagram"
+                        <a href="#" class="footer__social-link"><img src="../images/instagram.svg" alt="Instagram"
                                 class="footer__social-icon footer__social-icon--instagram"></a>
                     </li>
                     <li class="footer__social-item">
-                        <a href="#" class="footer__social-link"><img src="images/github.svg" alt="Github"
+                        <a href="#" class="footer__social-link"><img src="../images/github.svg" alt="Github"
                                 class="footer__social-icon footer__social-icon--github"></a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="footer__column">
-            <a href="index.html" class="footer__logo logo">
-                <img src="images/logo.svg" alt="Logo" class="logo__img">
+            <a href="../index.html" class="footer__logo logo">
+                <img src="../images/logo.svg" alt="Logo" class="logo__img">
             </a>
         </div>
         <div class="footer__column">
@@ -113,4 +161,5 @@ console.log('Не волнуйся, найдем оптимальное реше
         </div>
     </footer>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-const imagesSource = './images/star.svg';
+const imagesSource = '../images/star.svg';
 let currentPage = 1;
 
 document.addEventListener('DOMContentLoaded', function () {
